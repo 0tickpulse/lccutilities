@@ -1,5 +1,6 @@
 package me.tick.lccutilities
 
+import me.tick.lccutilities.listeners.ConditionsEvent
 import me.tick.lccutilities.listeners.MechanicsEvent
 import org.bukkit.plugin.java.JavaPlugin
 
@@ -16,6 +17,7 @@ class LCCUtils : JavaPlugin() {
 
         // register events
         server.pluginManager.registerEvents(MechanicsEvent(), this)
+        server.pluginManager.registerEvents(ConditionsEvent(), this)
     }
 
     override fun onDisable() {
